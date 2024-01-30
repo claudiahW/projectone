@@ -1,5 +1,6 @@
 import Fruits from "./components/Fruits";
 import Hello from "./components/Hello";
+import Fruit from "./components/Fruit";
 
 function App() {
   return ( 

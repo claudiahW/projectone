@@ -1,3 +1,5 @@
+import Fruit from "./Fruit";
+
 export default function Fruits() {
     // const fruits = ["Apple", "Mango", "Orange", "Banana", "Pineapple" ]
     const fruits = [
@@ -6,17 +8,14 @@ export default function Fruits() {
         { name: "Banana", price: 2 },
         { name: "Orange", price: 5 },
         { name: "Pinepple", price: 8 },
-
     ];
     return ( 
     <div>
         <ul>
         {fruits.map((fruit) => (
-        <li key={fruit.name}>{fruit.name}  $ {fruit.price}
-        </li>
+        <Fruit key={fruit.name} name={fruit.name} price={fruit.price}/>
         ))}
         </ul>
-        
         </div>
-       
-    )}
+    ); 
+    }
