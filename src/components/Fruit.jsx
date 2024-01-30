@@ -1,14 +1,10 @@
-export default function Fruit({name, price}) {
+export default function Fruit({name, price, soldout}) {
     return (
      <>
-     
-        {price > 5 ? (
-             <li>
-             {name} {price} 
+     <li>
+             {name} {price} {soldout? "soldOut" : ""}
              </li>
-        ) : ( 
-            ""
-            )}
+        
         </> 
     );
 }
