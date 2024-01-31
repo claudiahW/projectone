@@ -1,11 +1,14 @@
+import { useState } from "react";
+
 export default function Form() {
-    function handleChange() {
-        console.log("Change occured")
-    }
+    const [name,setName] = useState("");
+    function handleChange(e) {
+       setName(e.target.value);
+    } 
     return (
     <div>
         <form>
-           <input onChange={handleChange} type="text" value="Firstname" />
+           <input onChange={(e) => handleChange(e)} type="text"  value={name} />
         </form>
     </div>
     )
